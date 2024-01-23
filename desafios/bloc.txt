@@ -187,3 +187,134 @@ while (contador <= numeroMaximo) {
 console.log(contador);
 contador++
 }"
+
+==========================================================================================================
+contador 1
+==========================================================================================================
+Saber cómo trabajar con bucles de repetición, como el 'while', es esencial en la programación. Los bucles permiten automatizar tareas repetitivas y manejar grandes cantidades de datos de manera eficiente.
+
+Sin embargo, es importante utilizarlos con precaución para evitar bucles infinitos (cuando la condición nunca se vuelve falsa, lo que puede bloquear el programa).
+
+Siempre se recomienda tener una lógica que eventualmente haga que la condición se vuelva falsa para que el bucle termine correctamente.
+
+A continuación, tenemos un ejemplo de código:
+===========================================================================================================
+let contador = 1;
+
+while (contador < 4) {
+  console.log('Ejecutando la iteración ' + contador);
+  contador = contador + 1;
+}
+============================================================================================================
+============================================================================================================
+Al ejecutar código, podemos afirmar que:
+
+Alternativa correta
+La instrucción 'while (contador < 4){ }' inicia el bucle 'while'. Este continuará repitiendo el bloque de código dentro de las llaves { } mientras la condición 'contador < 4' sea verdadera.
+
+
+¡Exactamente! Esa condición significa que el bucle continuará mientras el valor de la variable 'contador' sea menor que 4.
+
+Alternativa correta
+El resultado final será la impresión de los mensajes "Ejecutando la iteración 1", "Ejecutando la iteración 2" y "Ejecutando la iteración 3" en la consola.
+
+
+¡Exacto! El bucle se ejecutó tres veces, y el valor final de la variable 'contador' es 4. En la cuarta iteración, el valor de 'contador' es 4. En ese momento, la condición 'contador < 4' se vuelve falsa, ya que 4 no es menor que 4. El bucle deja de ejecutar el código dentro de las llaves y termina.
+============================================================================================================
+==========================================================================================================
+contador 1
+==========================================================================================================
+Willian está comenzando en el mundo de la programación y recientemente descubrió que existe una manera de ejecutar un bloque de comandos repetidamente mientras una condición preestablecida no se cumpla.
+
+Animado por las posibilidades, decidió entrenar el uso de la estructura 'while()' en un proyecto personal de cálculo de medias aritméticas. Sin embargo, se encontró con un bucle infinito y no pudo descubrir por qué.
+
+Sabiendo que tú también estás estudiando lógica de programación, William te pidió ayuda para localizar dónde está el error en su código:
+===========================================================================================================
+let qtdNumeros = prompt('Digite la cantidad de números para el cálculo del promedio:');
+let soma = 0;
+let contador = qtdNumeros;
+
+while(contador > 0){
+    let numero = parseInt(prompt('Digite el numero:'));
+    soma += numero;
+}
+
+let promedio = soma / qtdNumeros;
+
+console.log(promedio);
+===========================================================================================================
+¿Qué cambio podrías sugerirle a Willian para que el código obtenga el resultado esperado? Elija la opción correcta:
+===========================================================================================================
+Cuando utilizamos bucles con contadores, debemos asegurarnos de que en algún momento alcancen la condición de parada del bucle. En el código anterior, el contador no tiene su valor alterado, y para resolver el bucle infinito, simplemente debes decrementarlo en cada iteración, agregando la línea 'contador--' dentro del bucle.
+
+
+Al decrementar el valor de la variable contador en cada iteración, eventualmente será menor o igual a 0, lo que detendrá la ejecución del bucle.
+============================================================================================================
+PARA SABER MAS: operadores logicos
+============================================================================================================
+uando escribimos programas en JavaScript, a menudo nos encontramos con la necesidad de tomar decisiones basadas en condiciones. Es aquí donde los operadores lógicos entran en escena y nos ayudan a crear una lógica sólida y eficaz.
+
+A continuación, vamos a explorar los operadores lógicos de una manera simple y fácil de entender. Tendremos ejemplos claros para ilustrar su funcionamiento.
+
+AND (&&)
+
+El operador AND, representado por el símbolo "&&", se utiliza para combinar dos condiciones y evaluar si ambas son verdaderas. Si ambas condiciones son verdaderas, el resultado será... verdadero. De lo contrario, lógicamente será falso. Por ejemplo:
+============================================================================================================
+let idad = 25;
+let tieneLicencia = true;
+
+// si la edad es mayor de 18 y tiene una licencia...
+if (idad > 18 && tieneLicencia) {
+  console.log("Puede conducir!");
+} else {
+  console.log("No puede conducir!");
+}
+============================================================================================================
+OR( | | )
+
+El operador OR, representado por los símbolos "||", se utiliza para verificar si al menos una de las condiciones es verdadera. Si una de las condiciones es verdadera, el resultado será verdadero. Si ambas son falsas, el resultado será falso. Aquí tienes un ejemplo: let tieneManzana = false; let tieneBanana = true;
+============================================================================================================
+// si tiene manzana o tiene banama…
+if (tieneManzana|| tieneBanana) {
+  console.log("Tienes frutas!");
+} else {
+  console.log("No tienes frutas.");
+}
+============================================================================================================
+OTROS TIPOS DE OPERADORES logicos
+============================================================================================================
+imagen_01
+imagen_02
+============================================================================================================
+============================================================================================================
+SOLO 5 INTENTOS
+============================================================================================================
+Eres la persona encargada del sistema informático de Serenatto - Café & Bistró. La gerente desea mejorar el sistema de lotería del bistró implementando un juego en el cual los clientes adivinan un número secreto para ganar un descuento especial. Empleando tus conocimientos del curso "Lógica de programación: sumérgete en la programación con JavaScript", decides implementar esta funcionalidad utilizando la instrucción "break".
+
+Pregunta: ¿Cómo implementarás un límite de 5 intentos para que los clientes adivinen el número secreto?
+============================================================================================================
+Utilizando un bucle while con la instrucción break cuando el cliente adivine el número.
+============================================================================================================
+let numeroSecreto = Math.floor(Math.random() * 10);
+let intentos = 0;
+while (intentos < 5) {
+  let intento = parseInt(prompt("Ingrese un número del 0 al 9:"));
+  intentos++;
+  if (intento == numeroSecreto) {
+    alert(`¡Eso es! Descubriste el número secreto ${numeroSecreto}`);
+    break;
+  }
+}
+
+============================================================================================================
+Usando un bucle for junto con la instrucción break cuando el cliente adivine el número o cuando el número de intentos llegue a 5.
+============================================================================================================
+let numeroSecreto = Math.floor(Math.random() * 10);
+for (let intentos = 0; intentos < 5; intentos++) {
+  let intento = parseInt(prompt("Ingrese un número del 0 al 9:"));
+  if (intento == numeroSecreto) {
+    alert(`¡Eso es! Descubriste el número secreto ${numeroSecreto}`);
+    break;
+  }
+}
+============================================================================================================
